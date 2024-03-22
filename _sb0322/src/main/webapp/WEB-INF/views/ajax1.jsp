@@ -30,7 +30,7 @@ $(function() {
 	
 	$("#selectBox").on("change", function(){
 		console.log($(this).val());
-		/*
+
 		let sel = $(this).val();
 		if (sel=='root') {
 			$.ajax({
@@ -48,8 +48,8 @@ $(function() {
 					$('#here').html(data);
 				}
 			});
-		}*/
-	};
+		}
+	});
 });
 </script>
 </body>
