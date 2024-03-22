@@ -27,6 +27,29 @@ $(function() {
 			$('#here').html(data);
 		}
 	});
+	
+	$("#selectBox").on("change", function(){
+		console.log($(this).val());
+		/*
+		let sel = $(this).val();
+		if (sel=='root') {
+			$.ajax({
+				url : '/',
+				method : 'GET',
+				success : function(data) {
+					$('#here').html(data);
+				}
+			});
+		} else if (sel == 'list') {
+			$.ajax({
+				url : '/list',
+				method : 'GET',
+				success : function(data) {
+					$('#here').html(data);
+				}
+			});
+		}*/
+	};
 });
 </script>
 </body>
