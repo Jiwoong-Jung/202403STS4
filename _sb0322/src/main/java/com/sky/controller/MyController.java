@@ -1,13 +1,15 @@
 package com.sky.controller;
 
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.sky.dto.Member;
+import com.sky.dto.MemberDto;
 import com.sky.service.MemberService;
 
 @Controller
@@ -45,7 +47,12 @@ public class MyController {
 	}
 	
 	@PostMapping("/update")
-	public String update(Model model, Member member) {
+	public String update(Model model, MemberDto memberDto) {
+		System.out.println(memberDto);
+		Member member = new Member();
+		BeanUtils.copyProperties(memberDto, member);
+//		ModelMapper modelMapper = new ModelMapper();
+//		Member member = modelMapper.map(memberDto, Member.class);
 		System.out.println(member);
 		memberService.update(member);
 		model.addAttribute("list", memberService.listAll());

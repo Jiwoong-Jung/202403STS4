@@ -7,15 +7,10 @@ import com.sky.service.WrongIdPasswordException;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 import lombok.ToString;
 
 @ToString
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
-@Setter
-public class Member {
+public class MemberDto {
 
 	private Long id;
 	private String email;
@@ -23,7 +18,7 @@ public class Member {
 	private String name;
 	private LocalDateTime registerDateTime;
 
-	public Member(String email, String password, 
+	public MemberDto(String email, String password, 
 			String name, LocalDateTime regDateTime) {
 		this.email = email;
 		this.password = password;
@@ -31,9 +26,9 @@ public class Member {
 		this.registerDateTime = regDateTime;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+//	public void setId(Long id) {
+//		this.id = id;
+//	}
 
 	public Long getId() {
 		return id;
