@@ -53,28 +53,28 @@ public class MyController {
 	}
 	
 	
-	@GetMapping("/todo")
-	public String todo() {
-		return "todoList";
-	}
+//	@GetMapping("/todo")
+//	public String todo() {
+//		return "todoList";
+//	}
 	
-	@PostMapping("/list")
-	public String list(Model model) {
-		model.addAttribute("list", memberService.listAll());
-		return "list";
-	}
-	
-	@GetMapping("/data")
-	@ResponseBody
-	public Member data(Model model, int id) {
-		return memberService.findById(id);
-	}
-	
-	@GetMapping("/root2") 
-	public String root2(Model model) {
-		model.addAttribute("list", memberService.listAll());
-		return "root2";
-	}
+//	@PostMapping("/list")
+//	public String list(Model model) {
+//		model.addAttribute("list", memberService.listAll());
+//		return "list";
+//	}
+//	
+//	@GetMapping("/data")
+//	@ResponseBody
+//	public Member data(Model model, int id) {
+//		return memberService.findById(id);
+//	}
+//	
+//	@GetMapping("/root2") 
+//	public String root2(Model model) {
+//		model.addAttribute("list", memberService.listAll());
+//		return "root2";
+//	}
 
 }
 
