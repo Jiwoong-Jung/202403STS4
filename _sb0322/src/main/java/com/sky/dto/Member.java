@@ -10,9 +10,9 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @ToString
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
+//@Builder
+//@AllArgsConstructor
+//@NoArgsConstructor
 public class Member {
 
 	private Long id;

@@ -46,7 +46,7 @@ public class MyController {
 	
 	@PostMapping("/update")
 	public String update(Model model, Member member) {
-		System.out.println(member.getId());
+		System.out.println(member);
 		memberService.update(member);
 		model.addAttribute("list", memberService.listAll());
 		return "root";
