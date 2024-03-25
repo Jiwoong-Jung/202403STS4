@@ -40,6 +40,9 @@
 		]]>
 	</insert>
 
+	<delete id="deleteBoard" parameterType="int">
+		delete from member where id = #{id}
+	</delete>
 
 </mapper>
 

@@ -1,5 +1,7 @@
 package com.sky;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,6 +40,15 @@ class Sb0325ApplicationTests {
 		BoardDto dto = BoardDto.builder().email("na0325@korea.com")
 				               .name("나하나").password("8765").build();
 		boardMapper.insertBoard(dto);
+	}
+	
+	@Test
+	@DisplayName("member 테이블에서 삭제")
+	void memDelete() {
+		int before = boardMapper.selectCount();
+		boardMapper.deleteBoard(21);
+		int after = boardMapper.selectCount();
+		assertEquals(before-1, after);
 	}
 
 }

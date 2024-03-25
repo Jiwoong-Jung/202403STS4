@@ -20,5 +20,5 @@ public interface BoardMapper {
 //	
 //	void updateBoard(BoardDto board);
 //	
-//	void deleteBoard(int boardIdx);
+	void deleteBoard(int id);
 }
