@@ -22,7 +22,22 @@
 	</select>
 	
 	<insert id="" parameterType="com.sky.dto.BoardDto">
-	
+	<![CDATA[
+			INSERT INTO member
+			(
+				email, 
+				password, 
+				name, 
+				regdate
+			) 
+			VALUES 
+			(
+				#{email}, 
+				#{password},
+				#{name}, 
+				NOW()			
+			)
+		]]>
 	</insert>
 
 
