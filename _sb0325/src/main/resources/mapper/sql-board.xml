@@ -21,7 +21,7 @@
 		]]>
 	</select>
 	
-	<insert id="" parameterType="com.sky.dto.BoardDto">
+	<insert id="insertBoard" parameterType="com.sky.dto.BoardDto">
 	<![CDATA[
 			INSERT INTO member
 			(
