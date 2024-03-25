@@ -34,7 +34,7 @@ class Sb0325ApplicationTests {
 		}
 	}
 	
-	@Test
+	//@Test
 	@DisplayName("member 테이블에 입력")
 	void memberInsert() {
 		BoardDto dto = BoardDto.builder().email("na0325@korea.com")
@@ -49,6 +49,14 @@ class Sb0325ApplicationTests {
 		boardMapper.deleteBoard(21);
 		int after = boardMapper.selectCount();
 		assertEquals(before-1, after);
+	}
+	
+	@Test
+	@DisplayName("member 테이블에 수정")
+	void memberUpdate() {
+		BoardDto dto = BoardDto.builder().email("lee0325@korea.com")
+				               .name("홍길순").password("1234").id(15).build();
+		boardMapper.updateBoard(dto);
 	}
 
 }

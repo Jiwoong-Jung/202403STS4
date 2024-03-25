@@ -43,6 +43,16 @@
 	<delete id="deleteBoard" parameterType="int">
 		delete from member where id = #{id}
 	</delete>
+	
+	<update id="updateBoard" parameterType="com.sky.dto.BoardDto">
+		<![CDATA[
+		update member set 
+			email = #{email}, 
+			name = #{name},
+			password=#{password}
+		where id = #{id}
+		]]>
+	</update>
 
 </mapper>
 
