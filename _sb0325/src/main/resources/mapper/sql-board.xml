@@ -20,6 +20,13 @@
 			ORDER BY id DESC
 		]]>
 	</select>
+	
+	<insert id="" parameterType="com.sky.dto.BoardDto">
+	
+	</insert>
 
 
 </mapper>
+
+
+

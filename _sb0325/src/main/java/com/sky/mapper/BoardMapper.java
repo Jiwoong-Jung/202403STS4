@@ -12,7 +12,7 @@ public interface BoardMapper {
 	
 	int selectCount();
 	
-//	void insertBoard(BoardDto board);
+	void insertBoard(BoardDto board);
 //
 //	BoardDto selectBoardDetail(int boardIdx);
 //
