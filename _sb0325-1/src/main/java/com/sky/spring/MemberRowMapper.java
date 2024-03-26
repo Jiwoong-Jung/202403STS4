@@ -1,4 +1,4 @@
-package spring;
+package com.sky.spring;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

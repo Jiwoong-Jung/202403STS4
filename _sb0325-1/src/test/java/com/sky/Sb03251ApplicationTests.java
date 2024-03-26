@@ -6,8 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import com.sky.repository.MemberMapper;
-
-import spring.Member;
+import com.sky.spring.Member;
 
 @SpringBootTest
 class Sb03251ApplicationTests {

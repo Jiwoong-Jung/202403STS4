@@ -1,4 +1,4 @@
-package spring;
+package com.sky.spring;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
