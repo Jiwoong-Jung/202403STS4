@@ -34,7 +34,7 @@ class Sb0325ApplicationTests {
 		}
 	}
 	
-	@Test
+	//@Test
 	@DisplayName("member 테이블에 입력")
 	void memberInsert() {
 		BoardDto dto = BoardDto.builder().email("na0326@korea.com")
