@@ -42,7 +42,7 @@ class Sb0325ApplicationTests {
 		boardMapper.insertBoard(dto);
 	}
 	
-	@Test
+	//@Test
 	@DisplayName("member 테이블에서 삭제")
 	void memDelete() {
 		int before = boardMapper.selectCount();

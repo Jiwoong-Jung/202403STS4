@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sky.mapper.EmpMapper">
+	<select id="selectCount" resultType="Integer">
+		select count(*) from emp
+	</select>
+
+
+	<select id="selectEmpList" resultType="com.sky.dto.Emp">
+		<![CDATA[
+			SELECT
+				ID,
+				EMAIL,
+				PASSWORD,
+				NAME,
+				DATE_FORMAT(REGDATE, '%Y.%m.%d %H:%i:%s') AS REGDATE
+			FROM
+				MEMBER
+			ORDER BY id DESC
+		]]>
+	</select>
+	
+	<insert id="insertBoard" parameterType="com.sky.dto.Emp">
+	<![CDATA[
+			INSERT INTO member
+			(
+				email, 
+				password, 
+				name, 
+				regdate
+			) 
+			VALUES 
+			(
+				#{email}, 
+				#{password},
+				#{name}, 
+				NOW()			
+			)
+		]]>
+	</insert>
+
+	<delete id="deleteBoard" parameterType="int">
+		delete from member where id = #{id}
+	</delete>
+	
+	<update id="updateBoard" parameterType="com.sky.dto.Emp">
+		<![CDATA[
+		update member set 
+			email = #{email}, 
+			name = #{name},
+			password=#{password}
+		where id = #{id}
+		]]>
+	</update>
+
+</mapper>
+
+
+
