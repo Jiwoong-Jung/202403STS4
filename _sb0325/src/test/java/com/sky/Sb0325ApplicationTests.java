@@ -34,12 +34,13 @@ class Sb0325ApplicationTests {
 		}
 	}
 	
-	//@Test
+	@Test
 	@DisplayName("member 테이블에 입력")
 	void memberInsert() {
-		BoardDto dto = BoardDto.builder().email("na0325@korea.com")
-				               .name("나하나").password("8765").build();
+		BoardDto dto = BoardDto.builder().email("na0326@korea.com")
+				               .name("신하나").password("1234").build();
 		boardMapper.insertBoard(dto);
+		System.out.println("-------------------"+dto.getId());
 	}
 	
 	//@Test
