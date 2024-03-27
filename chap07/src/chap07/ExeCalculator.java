@@ -14,7 +14,8 @@ public class ExeCalculator implements Calculator {
 		long result = delegate.factorial(num);
 		long end = System.nanoTime();
 		System.out.printf("%s.fac(%d) 실행시간 = %d\n",
-				        delegate.getClass().getSimpleName(), (end-start));
+				        delegate.getClass().getSimpleName()
+				        ,num, (end-start));
 		return result;
 	}
 
