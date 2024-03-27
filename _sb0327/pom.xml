@@ -80,6 +80,19 @@
             <artifactId>log4jdbc-log4j2-jdbc4</artifactId>
             <version>1.16</version>
         </dependency>
+        
+        <!-- jstl -->
+		<dependency>
+    		<groupId>javax.servlet</groupId>
+    		<artifactId>jstl</artifactId>
+		</dependency>
+		
+		<!-- tomcat-embed-jasper -->
+		<dependency>
+    		<groupId>org.apache.tomcat.embed</groupId>
+    		<artifactId>tomcat-embed-jasper</artifactId>
+		</dependency>
+        
     </dependencies>
 
     <build>
