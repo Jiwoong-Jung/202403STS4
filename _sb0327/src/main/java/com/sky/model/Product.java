@@ -1,10 +1,13 @@
 package com.sky.model;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+@NoArgsConstructor
 @RequiredArgsConstructor
 @Getter
 @Setter
@@ -12,6 +15,6 @@ import lombok.ToString;
 public class Product {
 
     private Long prodId;
-    final private String prodName;
-    final private int prodPrice;
+    @NonNull private String prodName;
+    @NonNull private int prodPrice;
 }
