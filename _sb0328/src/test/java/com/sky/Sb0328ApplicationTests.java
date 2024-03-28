@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.sky.model.Member;
 import com.sky.model.Product;
 import com.sky.repository.MemberMapper;
 import com.sky.repository.ProductMapper;
@@ -35,11 +36,26 @@ class Sb0328ApplicationTests {
 	}
 	
 	@Test
-	@DisplayName("member 테이블 자료")
+	@DisplayName("member 테이블 전체 자료")
 	void selectAllMember() {
 		log.info("member: {}", memberMapper.selectAllMember());
 	}
 	
+	
+	@Test
+	@DisplayName("member 테이블 자료")
+	void selectAllMember1() {
+		log.info("member: {}", memberMapper.selectMemberById(1L));
+	}
+	
+	@Test
+	@DisplayName("member 테이블 자료 입력")
+	void insertMember() {
+		Member member = Member.builder().name("김하나")
+				.city("인천").street("부산")
+				.zipcode("567-001").build();
+		memberMapper.insertMember(member);
+	}
 	
 	void contextLoads() {
 		log.debug("products 레코드 수 {}", productMapper.count());
