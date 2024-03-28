@@ -32,7 +32,7 @@ public class SampleAspect {
     public Object printCurrentTime(ProceedingJoinPoint pointcut) 
     		                                        throws Throwable {
 		System.out.println("======================================");
-        System.out.println(System.nanoTime()+"나노초");
+        System.out.println(System.nanoTime()+" 나노초");
         
         return pointcut.proceed();
     }
