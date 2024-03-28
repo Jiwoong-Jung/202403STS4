@@ -34,6 +34,12 @@ class Sb0328ApplicationTests {
 		log.info("member 수 {}", memberMapper.count());
 	}
 	
+	@Test
+	@DisplayName("member 테이블 자료")
+	void selectAllMember() {
+		log.info("member: {}", memberMapper.selectAllMember());
+	}
+	
 	
 	void contextLoads() {
 		log.debug("products 레코드 수 {}", productMapper.count());
