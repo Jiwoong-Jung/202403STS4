@@ -31,9 +31,13 @@ public class SampleAspect {
 	@Around("@within(org.springframework.stereotype.Controller)")
     public Object printCurrentTime(ProceedingJoinPoint pointcut) 
     		                                        throws Throwable {
-		System.out.println("======================================");
+		System.out.println("==============Around 시작============");
+		System.out.println("처리 전");
         System.out.println(System.nanoTime()+" 나노초");
-        
-        return pointcut.proceed();
+        Object result = pointcut.proceed();
+        System.out.println("처리 후");
+        System.out.println(System.nanoTime()+" 나노초");
+        System.out.println("==============Around 끝=============");
+        return result;
     }
 }
