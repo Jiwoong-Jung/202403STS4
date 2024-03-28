@@ -3,15 +3,11 @@
 <!DOCTYPE HTML>
 <html>
 <body>
-<div class="container">
-    <div class="header clearfix">
-        <nav>
-            <ul class="nav nav-pills pull-right">
-                <li role="presentation" class="active"><a href="${pageContext.request.contextPath}/">Home</a></li>
-            </ul>
-        </nav>
-        <h3 class="text-muted">My Application</h3>
-    </div>
+<div class="header">
+    <ul class="nav nav-pills pull-right">
+        <li><a href="/">Home</a></li>
+    </ul>
+    <a href="/"><h3 class="text-muted">HELLO SHOP</h3></a>
 </div>
 </body>
 </html>
