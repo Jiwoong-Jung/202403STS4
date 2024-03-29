@@ -29,4 +29,9 @@ public class MyController {
 		return "list";
 	}
 	
+	@GetMapping("/save")
+	public String save() {
+		return "save";
+	}
+	
 }
