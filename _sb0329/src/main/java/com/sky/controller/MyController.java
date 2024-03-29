@@ -7,7 +7,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.sky.model.Product;
+import com.sky.repository.MemberMapper;
 import com.sky.repository.ProductMapper;
+import com.sky.service.OrderService;
 import com.sky.service.ProductService;
 
 import lombok.extern.slf4j.Slf4j;
@@ -18,6 +20,12 @@ public class MyController {
 	
 	@Autowired
 	ProductService productService;
+	
+	@Autowired
+	OrderService orderService;
+	
+	@Autowired
+	MemberMapper memberMapper;
 	
 	@GetMapping("/")
 	public String main(Model model) {
@@ -47,6 +55,19 @@ public class MyController {
 		log.info("product: {}", product.getProdPrice());
 		productService.addProduct(product);
 		return "redirect:/items";
+	}
+	
+	@GetMapping("/orders")
+	public String orders(Model model) {
+		model.addAttribute("list", orderService.getAllOrders());
+		return "orderList";
+	}
+	
+	@GetMapping("/order")
+	public String order(Model model) {
+		model.addAttribute("list", memberMapper.selectAllMember());
+		model.addAttribute("list2", productService.getAllProducts());
+		return "orderForm";
 	}
 	
 }

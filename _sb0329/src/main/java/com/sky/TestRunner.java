@@ -39,6 +39,13 @@ public class TestRunner implements ApplicationRunner {
         
         jdbcTemplate.execute("INSERT INTO member (name, city,"
         		+ " street, zipcode) values ('홍길동', '서울', '서대문', '123-456')");
+        jdbcTemplate.execute("INSERT INTO member (name, city,"
+        		+ " street, zipcode) values ('김하나', '부산', '남포동', '567-890')");
+        jdbcTemplate.execute("INSERT INTO member (name, city,"
+        		+ " street, zipcode) values ('테스트', '인천', '남구', '555-777')");
+        
+        jdbcTemplate.execute("INSERT INTO orders (member_id, prod_id, count) values (1, 2, 3)");
+        jdbcTemplate.execute("INSERT INTO orders (member_id, prod_id, count) values (2, 1, 1)");
 		
 	}
 
