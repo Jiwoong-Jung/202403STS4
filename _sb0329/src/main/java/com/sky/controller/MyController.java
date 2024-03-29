@@ -22,4 +22,11 @@ public class MyController {
 				    productService.getProductById(3L));
 		return "main";
 	}
+	
+	@GetMapping("/list")
+	public String list(Model model) {
+		model.addAttribute("list", productService.getAllProducts());
+		return "list";
+	}
+	
 }
